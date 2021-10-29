@@ -4,7 +4,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 99vh;
     background-color: #F4EFE0;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background-image: url(../public/teste.svg);
+    background-image: url(../public/headerDetail.svg);
     width: 80%;
     height: 35vh;
     margin-left: auto;
@@ -60,17 +60,6 @@ header {
     width: 100%;
     height: 35%;
     border: 1px solid black;
-}
-
-.footerDetail {
-    background-image: url(../public/elipse.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 5%;
-    position: absolute;
-    bottom: -2px;
-    margin-bottom: -4px;
 }
 
 
