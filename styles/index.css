@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #F4EFE0;
+}
+
+@media only screen and (max-width: 480px) {
+    
+body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow: hidden;
+}
+
+header {
+    background-image: url(../public/teste.svg);
+    width: 80%;
+    height: 35vh;
+    margin-left: auto;
+    background-repeat: no-repeat;
+}
+
+.headerContent {
+    width: 80%;
+    height: 50%;
+    padding-top: clamp(15px, 8%, 10%);
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.9rem, 2vw, 1.8rem);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: #FFFFFF;
+}
+
+.choose {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.75rem, 3vw, 2.1rem);
+    font-style: regular;
+    margin: 0 auto;
+}
+
+.carousel {
+    margin-top: 25px;
+    width: 100%;
+    height: 35%;
+    border: 1px solid black;
+}
+
+.footerDetail {
+    background-image: url(../public/elipse.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    bottom: -2px;
+    margin-bottom: -4px;
+}
+
+
+}
+
+@media only screen and (max-width: 459px) {
+
+.choose{
+    margin-top: -13px;
+}
+
+    header {
+        height: 40vh;
+    }
+
+}
