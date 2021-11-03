@@ -4,10 +4,11 @@
 }
 
 body {
-    height: 99vh;
+    height: 100vh;
     background-color: #F4EFE0;
 }
 
+/* Mobile version */
 @media only screen and (max-width: 480px) {
     
 body {
@@ -18,7 +19,7 @@ body {
 }
 
 header {
-    background-image: url(../public/headerDetail.svg);
+    background-image: url(../public/headerDetailMobile.svg);
     width: 80%;
     height: 35vh;
     margin-left: auto;
@@ -35,7 +36,12 @@ header {
     justify-content: center;
 }
 
-.title {
+.texts {
+    display: none;
+}
+
+
+.titleMobile{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,10 +65,11 @@ header {
     margin-top: 25px;
     width: 100%;
     height: 35%;
-    border: 1px solid black;
 }
 
-
+.foodSlider {
+    display: none;
+}
 }
 
 @media only screen and (max-width: 459px) {
@@ -73,6 +80,118 @@ header {
 
     header {
         height: 40vh;
+    }
+
+}
+
+
+/* Tablet version */
+@media only screen and (min-width: 481px) {
+    
+    body {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            overflow: hidden;
+    }
+    
+
+    header {
+        width: 100%;
+        height: 45vh;
+    }
+
+
+    .texts{
+        width: 35%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+
+    .headerContent{
+        height: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+
+    .headerDetail {
+        width: 70%;
+        height: 45vh;
+        margin-left: auto;
+        background-image: url(../public/headerDetailTablet.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+    }
+
+
+    .titleMobile {
+        display: none;
+    }
+    
+    
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(1.6rem, 2vw, 1.8rem);
+        font-family: 'Nunito', sans-serif;
+        color: #000000;    
+    }
+    
+
+    .recipeName {
+       font-family: 'Nunito', sans-serif;
+        color: #E26F64;
+        font-weight: 900;
+        font-size: clamp(30px, 2vw, 50%);
+    }
+
+
+    .titleDetail {
+        width: 70%;
+        height: 7px;
+        border-radius: 50px;
+        background-color: #E26F64;
+        margin-bottom: 20px;
+        margin-right: auto;
+    }
+
+    .choose {
+        font-family: 'Nunito', sans-serif;
+        font-weight: 400;
+        font-size: clamp(1.75rem, 3vw, 2.1rem);
+        font-style: regular;
+        margin: 0 auto;
+    }
+    
+
+    .carousel {
+        margin-top: 25px;
+        width: 100%;
+        height: 35%;
+    }
+    
+
+    .foodSlider {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+
+    img {
+        width: 90%;
     }
 
 }
