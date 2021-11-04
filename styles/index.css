@@ -86,7 +86,7 @@ header {
 
 
 /* Tablet version */
-@media only screen and (min-width: 481px) {
+@media screen and (min-device-width: 481px) and (max-device-width: 768px) { 
     
     body {
             display: flex;
@@ -148,12 +148,16 @@ header {
         color: #000000;    
     }
     
+    .titleName {
+        font-size: clamp(32px, 10vw, 70%);
+    }
 
     .recipeName {
        font-family: 'Nunito', sans-serif;
         color: #E26F64;
         font-weight: 900;
-        font-size: clamp(30px, 2vw, 50%);
+        font-size: clamp(33px, 10vw, 70%);
+        margin-right: auto;
     }
 
 
@@ -193,5 +197,125 @@ header {
     img {
         width: 90%;
     }
+
+}
+
+
+/*Desktop/laptop version */
+
+@media only screen and (min-width: 769px) {
+ 
+    body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow: hidden;
+}
+
+
+header {
+    width: 100%;
+    height: 45vh;
+}
+
+
+.texts{
+    width: 60vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.titleName {
+    
+    font-size: clamp(80%, 65px, 40vw);
+
+}
+.headerContent{
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+.headerDetail {
+    width: 40vw;
+    height: 30vw;
+    min-height: 100%;
+    min-width: 450px;
+    margin-left: auto;
+    background-image: url(../public/headerDetailDesktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+
+.titleMobile {
+    display: none;
+}
+
+
+.title {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    color: #000000;    
+}
+
+
+.recipeName {
+   font-family: 'Nunito', sans-serif;
+    color: #E26F64;
+    font-weight: 900;
+    font-size: clamp(80%, 65px, 40vw);
+    margin-right: auto;
+}
+
+
+.titleDetail {
+    width: 40%;
+    height: 7px;
+    border-radius: 50px;
+    background-color: #E26F64;
+    margin-bottom: 20px;
+    margin-right: auto;
+}
+
+.choose {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.75rem, 3vw, 2.1rem);
+    font-style: regular;
+    margin: 0 auto;
+}
+
+
+.carousel {
+    margin-top: 25px;
+    width: 100%;
+    height: 35%;
+}
+
+
+.foodSlider {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+}
+
+
+img {
+    width: 80%;
+}
 
 }
