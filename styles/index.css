@@ -8,25 +8,11 @@ body {
     background-color: #F4EFE0;
 }
 
-@media screen and (min-device-width: 0px) and (max-device-width: 768px) { 
-    p span{
-        font-size: 40px;
-        margin: 0 5px;
-        cursor: pointer;
-        color: #555;
-         width: 30px;
-        height: 30px;
-        display: inline-block;
-        line-height: 19px;
-        text-align: center;
-        border-radius: 3px;
-    }
-     p span:hover{
-        background: #222;
-        color: white;
-    }
-
+a {
+    text-decoration: none;
 }
+
+
 /* Mobile version */
 @media only screen and (max-width: 480px) {
     
