@@ -46,6 +46,10 @@ ol li::marker{
 }
 
 
+*::selection {
+   background-color: rgb(158, 215, 208, 0.85);
+}
+
 
 /* Mobile version */
 
@@ -163,6 +167,11 @@ ol{
     flex-wrap: wrap;
     gap: 2vw;
     
+}
+
+
+.desktop {
+    display: none;
 }
 
 }
@@ -286,6 +295,11 @@ ol {
 gap: 2vw;
 }
 
+
+.desktop {
+    display: none;
+}
+
 }
 
 
@@ -340,41 +354,40 @@ display:none;
 
 .headerBox {
 height: 90vh;
-background-image: linear-gradient(to top, #E26F64 60%, #F4EFE0 40%);
+background-image: linear-gradient(to top, #E26F64 65%, #F4EFE0 35%);
 width: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-border: 1px solid black;
 }
 
 
 .headerBox > img {
 width: 20%;
-margin-bottom: -10%;
-
+margin-bottom: -15%;
 }
 
 
 .headerBox > h1 {
 color: #FFFFFF;
 font-size: 10vw;
+margin-top: 10%;
 }
 
 
 .descriptionBox {
-height: 20vh;
+height: 15vh;
 background-color: #E58D82;   
 width: 80%;
-padding: 6% 10%;
+padding: 5vh 10%;
 overflow-y: scroll;
-
+box-shadow: 0px -5px 30px rgba(0, 0, 0, 0.1);
 }
 
 .descriptionBox > p {
 color: #FFFFFF;
-font-size: 20px;
+font-size: 23px;
 
 }
 
@@ -387,10 +400,6 @@ justify-content: space-around;
 }
 
 
-.viewInformations > span {
-display: none;
-}
-
 
 .listInformations {
 width: 100%;
@@ -401,27 +410,47 @@ font-size: larger;
 }
 
 
-ul, ol{
+ul, ol {
 height: 100%;
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 flex-wrap: wrap;
-margin-left: 5.5vw;
+gap: 20px;
 }
 
 
-ul {
-justify-content: space-around;
+.mobileTablet {
+    display: none;
+}
+    
+
+.desktop {
+    width: 100%;
 }
 
 
-ul {
-display: none;
+ol li::marker{
+    font-size: 2vw;
 }
 
 
-ol {
-gap: 2vw;
+.ingredients, .preparation {
+    height: 95vh;
+    width: 34%;
+    padding: 2.5vh 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
+
+
+.ingredients > span, .preparation > span {
+    font-family: 'Nunito',sans-serif;
+    color: #E26F64;
+    font-size: 40px;
+}
+
+
 }

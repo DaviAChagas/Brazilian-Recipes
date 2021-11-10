@@ -12,6 +12,9 @@ a {
     text-decoration: none;
 }
 
+*::selection {
+    background-color: rgb(158, 215, 208, 0.85);
+ }
 
 /* Mobile version */
 @media only screen and (max-width: 480px) {
