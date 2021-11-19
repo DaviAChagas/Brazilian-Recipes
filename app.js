@@ -1,29 +1,31 @@
-// Change the list view in Mobilke/Tablet version
+// CHange title with typing effect
 
-const ingredientsButton = document.getElementsByClassName('viewButton')[0];
-const preparationButton = document.getElementsByClassName('viewButton')[1];
+const typing = document.querySelector('[data-js="typing"]')
 
-ingredientsButton.onclick = () => {viewIngredients()};
-preparationButton.onclick = () => {viewPreparation()};
-
-const informationsMobile = document.getElementsByClassName('listInformations')[0];
-
-function viewIngredients() {
-
-    informationsMobile.children[1].style.display = "none";
-    informationsMobile.children[0].style.display = "flex";
-
-    ingredientsButton.style.backgroundColor = "#F59F41";
-    preparationButton.style.backgroundColor = "#E26F64";
-}
+const typingTitle = ['Feijoada     ', 'Brigadeiro     ', 'Pão de Queijo     ', 'Bolinho Caipira     ']
 
 
-function viewPreparation() {
+let titleIndex = 0
+let characterIndex = 0
+let currentTitle = ''
+let currentCharacters = ''
 
-    informationsMobile.children[0].style.display = "none";
-    informationsMobile.children[1].style.display = "flex";
-    
-    preparationButton.style.backgroundColor = "#F59F41";
-    ingredientsButton.style.backgroundColor = "#E26F64";
+
+const type = () => {
+
+    titleIndex = titleIndex === typingTitle.length ? 0 : titleIndex 
+
+    currentTitle = typingTitle[titleIndex]
+    currentCharacters = currentTitle.slice(0, characterIndex++)
+    typing.textContent = currentCharacters
+
+    if (currentCharacters.length === currentTitle.length) {
+        titleIndex++
+        characterIndex = 0
+    }
 
 }
+
+setInterval(type, 350)
+
+//recipeName
