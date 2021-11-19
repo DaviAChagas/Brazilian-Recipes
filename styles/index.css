@@ -344,8 +344,9 @@ header {
 .titleName {
     
     font-size: clamp(80%, 65px, 40vw);
-
+    
 }
+
 .headerContent{
     height: 100%;
     display: flex;
